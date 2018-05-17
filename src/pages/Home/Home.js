@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
-import { Link } from 'react-router-dom';
 import Header from '../../common/component/Header/Header';
 import Tabs from '../../common/component/Tabs/Tabs';
+import Footer from '../../common/component/Footer/Footer';
 
 export default class Home extends Component {
     render() {
@@ -9,7 +9,7 @@ export default class Home extends Component {
             <div>
               <Header/>
               <Tabs/>
-              <Link to="/review">Your personal review.</Link>
+              <Footer />
             </div>
         );
     }

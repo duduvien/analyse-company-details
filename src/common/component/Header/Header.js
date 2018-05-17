@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import classNames from 'classnames';
 import { Header as SemanticHeader } from 'semantic-ui-react';
 
-import MenuIcon from './components/MenuIcon/MenuIcon';
+import MenuIcon from '../MenuIcon/MenuIcon';
 import Nav from './components/Nav/Nav';
 import styles from './Header.css';
 import links from './links';
@@ -19,6 +19,10 @@ const IntroHeader = () => (
             <span className={styles.introSubTitle}>Powered by Jobstreet Company Reviews</span>
         </div>
     </div>
+)
+
+const IntroHeader2 = () => (
+    <div className={styles.introContainer} />
 )
 
 export default class Header extends Component {
@@ -84,7 +88,7 @@ export default class Header extends Component {
                         />
                     </div>
                 </div>
-                <IntroHeader />
+                <IntroHeader2 />
             </div>
         );
     }
