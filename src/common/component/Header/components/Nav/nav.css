@@ -1,0 +1,181 @@
+.container {
+    list-style-type: none;
+    padding-left: 10px;
+}
+
+.link {
+    line-height: 50px;
+    display: block;
+}
+
+.linkIsActive {
+    font-weight: 700;
+}
+
+.linkHideOnMobile {
+    display:none;
+}
+
+.itemHasDropdown .link:after {
+    display: inline-block;
+    content: '';
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 4px 4px 0 4px;
+    border-color: transparent;
+    border-top-color: var(--blue);
+    position: relative;
+    top: -3px;
+    left: 6px;
+}
+
+.itemHasDropdown .link:hover:after {
+    border-top-color: #142d69;
+}
+
+.dropdownList {
+    display: none;
+    list-style-type: none;
+}
+
+.dropdownLink {
+    line-height: 36px;
+}
+
+/*
+    Right aligned is used for the user navigation menu on the right hand side
+*/
+.isRightAligned {
+    padding: 0 20px 10px 0;
+}
+.isRightAligned .dropdownLink {
+    padding-left: 20px;
+}
+.isRightAligned .itemShowDropdown .link:after {
+    border-top-color: #757575;
+}
+
+.isRightAligned .itemShowDropdown .dropdownList {
+    border-top-color: #757575;
+}
+
+@media (min-width: 769px) {
+    .container {
+        flex: 1 1  auto;
+        display: flex;
+        min-width: 530px;
+        max-width: 680px;
+        width: 100%;
+        padding: 0;
+    }
+    .container:hover,
+    .container:focus {
+        color: #F5F5F7;
+    }
+
+    .link {
+        display: inline-block;
+        line-height: 50px;
+        padding: 0;
+        width: 100%;
+        text-align: center;
+        color: #ffffff;
+    }
+    .link:hover,
+    .link:active {
+        color: white;
+    }
+    
+    .linkHideOnMobile {
+        display: inline-block;
+    }
+
+    .item {
+        flex:1 0 auto;
+        display: inline-block;
+        position: relative;
+    }
+
+    .itemHasDropdown .link:after {
+        border-top-color: #ffffff;
+    }
+    .itemHasDropdown .link:hover:after {
+        border-top-color: #F5F5F7;
+    }
+
+    .itemShowDropdown {
+        background: #142d69;
+    }
+    .itemShowDropdown .link:after {
+        border-top-color: #F5F5F7;
+    }
+    .itemShowDropdown .dropdownList {
+        display: block;
+    }
+
+    .dropdownList {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        min-width: 160px;
+        padding: 5px 0;
+        background: #ffffff;
+        border: 1px solid #F5F5F7;
+        border-radius: 0 0 3px 3px;
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+    }
+
+    .dropdownLink {
+        display: block;
+        padding: 0 20px;
+        color: #9d9d9d;
+    }
+    .dropdownLink:hover,
+    .dropdownLink:focus {
+        color: #333;
+        background: #F5F5F7;
+    }
+
+    .isRightAligned {
+        width: auto;
+        flex: 0 0 auto;
+        min-width: 0;
+        padding: 0;
+    }
+    .isRightAligned .link {
+        padding:0 15px;
+    }
+    .isRightAligned .itemShowDropdown {
+        background: var(--dark-blue);
+    }
+    .isRightAligned .itemShowDropdown .link:after {
+        border-top-color: var(--off-white);
+    }
+    .isRightAligned .item {
+        position:relative;
+    }
+    .isRightAligned .item:after {
+        position: absolute;
+        content:'';
+        width:1px;
+        height: 25%;
+        top:37%;
+        right:0;
+        background: var(--white);
+        display: block;
+    }
+    .isRightAligned .item:last-child:after {
+        display: none;
+    }
+    .isRightAligned .dropdownList {
+        right: 0;
+        left: auto;
+    }
+}
+
+@media (min-width: 990px) {
+    .link {
+        padding: 0 var(--hr);
+    }
+}

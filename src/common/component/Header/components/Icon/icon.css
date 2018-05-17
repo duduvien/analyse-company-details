@@ -1,0 +1,9 @@
+.root {
+    display: inline-block;
+}
+
+.svg {
+    width: 16px;
+    height: 16px;
+    fill: #bdbdbd;
+}
