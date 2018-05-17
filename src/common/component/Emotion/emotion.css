@@ -1,0 +1,35 @@
+.icon {
+    width: 70px;
+    height: 70px;
+}
+
+.iconSvg {
+    width: 70px;
+    height: 70px;
+    fill: white;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+    .infoContainer {
+        text-align: center;
+        margin-top: 15px;
+        color: #ffffff;
+    }
+
+    .percentage {
+        font-weight: 300;
+        font-size: 24px;
+    }
+
+    .feeling {
+        font-size: 14px;
+        text-transform: capitalize;
+    }
