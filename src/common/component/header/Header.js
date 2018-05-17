@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import classNames from 'classnames';
 import { Header as SemanticHeader } from 'semantic-ui-react';
 
-import MenuIcon from './components/MenuIcon/MenuIcon';
+import MenuIcon from '../MenuIcon/MenuIcon';
 import Nav from './components/Nav/Nav';
 import styles from './Header.css';
 import links from './links';
