@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import styles from './Tabs.css';
 import Column from './components/Column';
+import * as goodPhases from '../../../data/goodPhases';
+import * as badPhases from '../../../data/badPhases';
 
 const content = [
     {value: "test", percentage: '50'},
@@ -12,6 +14,7 @@ class Tabs extends Component {
         super();
         this.tiveness = ['POSITIVE', 'NEGETIVE'];
         this.state = { activeTab: 'POSITIVE' }
+        console.log('goodPhases', goodPhases);
         this.goodContent = [
             {value: "Good work life balance"},
             {value: "Growth and flexible working hours"},
@@ -32,6 +35,10 @@ class Tabs extends Component {
             {value: "Unstable working process and long working hours"},
             {value: "Communitcation issue with the top level management"},
         ];
+    }
+
+    componentDidMount() {
+
     }
 
     handleChange(event) {

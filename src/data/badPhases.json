@@ -1,0 +1,27 @@
+[
+  {
+    "Phrases": "Did not provide any training",
+    "ProbA": "Ineffective Management and lack of training",
+    "ProbB": "Disregarding Professional Development"
+  },
+  {
+    "Phrases": "Heavy Workload",
+    "ProbA": "Terrible work schedule and culture",
+    "ProbB": "Unstable working process and long working hours"
+  },
+  {
+    "Phrases": "Communitcation issue with the top level management",
+    "ProbA": "Passive-Aggressive Communication between Employee - Management",
+    "ProbB": "Disregarding Professional Development"
+  },
+  {
+    "Phrases": "Low salary and long working hours",
+    "ProbA": "Having salaries that haven't increased much, but expenses that have",
+    "ProbB": "Low Compensation and no Benefits"
+  },
+  {
+    "Phrases": "Poor work life balance",
+    "ProbA": "Unhealthy work life balance",
+    "ProbB": "Management has no regard for employees' personal life and preferences"
+  }
+]
