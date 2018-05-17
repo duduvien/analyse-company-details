@@ -24,12 +24,12 @@
 }
 
 .tabHeader button.active {
-    background: #336633;
+    background: #1d953f;
     color: #ffffff;
 }
 
 .tabHeader button.activeRight {
-    background: #003366;
+    background: #032749;
     color: #ffffff;
 }
 
@@ -45,3 +45,16 @@
 .tabPane {
 
 }
+
+.emotions {
+    display: flex;
+    flex-direction: row;
+}
+
+    .emotionContainer {
+        flex: 1 0 25%;
+        width: 25%;
+        height: 170px;
+        background-color: #ff4a4b;
+        border-right: 0.5px solid #ffffff;
+    }

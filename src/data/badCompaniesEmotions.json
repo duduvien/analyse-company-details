@@ -1,0 +1,11 @@
+{
+    "emotion": {
+        "happy": 48,
+        "bored": 3,
+        "sarcasm": 8,
+        "excited": 115,
+        "sad": 27,
+        "fear": 9,
+        "angry": 24
+    }
+}
