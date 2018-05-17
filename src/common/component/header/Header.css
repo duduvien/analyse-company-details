@@ -1,3 +1,52 @@
-.AppTitle {
-    background: #abcedf;
+.container {
+    background: #ffffff;
+    position: relative;
+    z-index: 10;
+}
+
+.toggle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    padding: 0;
+    width: 50px;
+    height: 50px;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+.navContainer {
+    max-width: 1024px;
+    margin: 0 auto;
+    overflow: hidden;
+    padding-top: 50px;
+    transition: max-height 125ms ease-out;
+    max-height: 1000px;
+}
+
+.navContainerHideOnMobile {
+    max-height: 0;
+}
+
+@media (min-width: 769px) {
+    .navWrapper {
+        background: #1c3f94;
+    }
+    .navContainer {
+        height: 50px;
+        overflow: visible;
+        padding-top: 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        transition: none;
+    }
+    .toggle {
+        display: none;
+    }
+    .navContainerHideOnMobile {
+        max-height: 50px;
+    }
 }
