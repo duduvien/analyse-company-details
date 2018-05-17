@@ -1,10 +1,25 @@
 import React, { Component } from 'react';
 import classNames from 'classnames';
+import { Header as SemanticHeader } from 'semantic-ui-react';
 
 import MenuIcon from './components/MenuIcon/MenuIcon';
 import Nav from './components/Nav/Nav';
 import styles from './Header.css';
 import links from './links';
+
+const IntroHeader = () => (
+    <div className={styles.introContainer}>
+        <div className={styles.introContainerLeft}>
+            <h1 className={styles.introTitleLeft}>Flip</h1>
+        </div>
+        <div className={styles.introContainerRight}>
+            <h1 className={styles.introTitleRight}>ped</h1>
+        </div>
+        <div className={styles.introText}>
+            <span className={styles.introSubTitle}>Powered by Jobstreet Company Reviews</span>
+        </div>
+    </div>
+)
 
 export default class Header extends Component {
     constructor(props) {
@@ -69,6 +84,7 @@ export default class Header extends Component {
                         />
                     </div>
                 </div>
+                <IntroHeader />
             </div>
         );
     }

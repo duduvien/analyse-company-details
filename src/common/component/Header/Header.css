@@ -4,6 +4,52 @@
     z-index: 10;
 }
 
+    .introContainer {
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        height: 200px;
+    }
+        .introContainerLeft {
+            position: relative;
+            width: 50%;
+            height: 100%;
+            background-color: #1c3f94; 
+        }
+            .introTitleLeft {
+                position: absolute;
+                top: 25%;
+                right: 0;
+                color: #ffffff;
+                font-size: 45px;
+            }
+        .introContainerRight {
+            position: relative;
+            width: 50%;
+            height: 100%;
+            background-color: #ffffff; 
+        }
+            .introTitleRight {
+                position: absolute;
+                top: 25%;
+                left: 0;
+                color: #1c3f94;
+                font-size: 45px;
+            }
+        .introSubTitle {
+            padding: 4px 15px;
+            background-color: #058b32;
+            color: #ffffff;
+        }
+        .introText {
+            padding-top: 20px;
+            text-align: center;
+            position: absolute;
+            top: 50%;
+            width: 100%;
+        }
+        
+
 .toggle {
     position: absolute;
     top: 0;
