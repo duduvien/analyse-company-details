@@ -1,12 +1,14 @@
 import React from 'react';
 import styles from './Column.css';
 
-const CommentCol = (props) => (
-    <div className={styles.typewriter}>
+const CommentCol = ({data, floatRight}) => {
+    console.log('THis:',data, floatRight);
+    return (
+    <div className={`${styles.typewriter} ${floatRight && styles.floatRight}`}>
         <p>
-        Tab {props.value}
+            {data.value}
         </p>
     </div>
-);
+)};
 
 export default CommentCol;

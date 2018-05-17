@@ -1,3 +1,47 @@
+.reset {
+    padding: 0 !important;
+}
+
+.tabs a {
+    background: #663300 !important;
+}
+
+.tabs a .ui.tabular.menu .active.item{
+    background: #ff0000 !important;
+}
+
+.tabHeader {
+    display: flex;
+    flex-direction: row;
+}
+
+.tabHeader button {
+    width: 100%;
+    padding: 20px;
+    border: 1px solid #f0f0f0;
+    color: #909090;
+    cursor: pointer;
+}
+
+.tabHeader button.active {
+    background: #336633;
+    color: #ffffff;
+}
+
+.tabHeader button.activeRight {
+    background: #003366;
+    color: #ffffff;
+}
+
 .tabTitle {
-    background: #00ff0f;
+    font-size: 25px;
+}
+
+.tabTitleSub {
+    font-size: 11px;
+    font-weight: 300;
+}
+
+.tabPane {
+
 }
