@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import styles from './App.css';
 import Header from './common/component/header/Header';
-import Tabs from './common/component/tabs/Tabs';
+import Tabs from './common/component/Tabs/Tabs';
 
 class App extends Component {
   render() {
