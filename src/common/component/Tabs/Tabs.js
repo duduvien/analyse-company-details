@@ -38,8 +38,13 @@ class Tabs extends Component {
     }
 
     componentDidMount() {
-
+        this.timer = setInterval(() =>  this.setState(prevState => ({ test: !prevState.test })), 5000);
     }
+
+    componentWillUnmount() {
+        clearInterval(this.timer);
+    }
+
 
     handleChange(event) {
         event.preventDefault();
