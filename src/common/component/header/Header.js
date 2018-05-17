@@ -3,7 +3,7 @@ import classNames from 'classnames';
 
 import MenuIcon from './components/MenuIcon/MenuIcon';
 import Nav from './components/Nav/Nav';
-import styles from './header.css';
+import styles from './Header.css';
 import links from './links';
 
 export default class Header extends Component {
