@@ -14,7 +14,7 @@ const KEYS = ['Phrases','ProbA','ProbB'];
 class Tabs extends Component {
     constructor() {
         super();
-        this.tiveness = ['POSITIVE', 'NEGETIVE'];
+        this.tiveness = ['POSITIVE', 'NEGATIVE'];
         this.state = { activeTab: 'POSITIVE', objKey: 'Phrases' }
     }
 
@@ -35,9 +35,11 @@ class Tabs extends Component {
 
     handleChange(event) {
         event.preventDefault();
-        if(event.target.value !== this.state.activeTab) {
-            this.setState({ activeTab: this.tiveness.find((item) => item !== this.state.activeTab)});
+        if(event.currentTarget.value !== this.state.activeTab) {
+            this.setState({ activeTab: event.currentTarget.value});
         }
+
+        return false;
     }
 
     render() {
@@ -63,7 +65,7 @@ class Tabs extends Component {
                           goodPhases.map((item, index) => {
                               console.log('item=>', item[objKey]);
                               return (
-                                  <Column key={index} data={item[objKey]}/>
+                                  <Column key={`${item[objKey]}${index}`} data={item[objKey]}/>
                               );
                           })
                       }
@@ -72,7 +74,7 @@ class Tabs extends Component {
                           badPhases.map((item, index) => {
                               console.log('item=>', item[objKey]);
                               return (
-                                  <Column key={index} data={item[objKey]} floatRight/>
+                                  <Column key={`${item[objKey]}${index}`} data={item[objKey]} floatRight/>
                               );
                           })
                       }
