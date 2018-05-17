@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Header } from 'semantic-ui-react';
 import styles from './Tabs.css';
 import Column from './components/Column';
 
@@ -17,6 +18,24 @@ const content = [
 
 const KEYS = ['Phrases', 'ProbA', 'ProbB'];
 
+const AlternativeToggle = () => {
+    const a = {
+                backgroundColor: "rgb(52, 168, 82)",
+                color:  "#ffffff",
+                padding: "12px",
+                borderRadius: "3px",
+                margin: "0 4px",
+                letterSpacing: "1px",
+            }
+            const b = {
+                padding: "28px",
+                textAlign: "center",
+                backgroundColor: "#f0f0f0",
+                margin: 0,
+            }
+    return (<Header style={b} size='huge'>Find out what people said about <b style={a}>GOOD</b> company</Header>);
+}
+
 class Tabs extends Component {
     constructor() {
         super();
@@ -25,7 +44,7 @@ class Tabs extends Component {
     }
 
     componentDidMount() {
-        this.timer = setInterval(() => this.setState(this.changeDataSet), 5000);
+        this.timer = setInterval(() => this.setState(this.changeDataSet), 10000);
     }
 
     componentWillUnmount() {
@@ -83,6 +102,7 @@ class Tabs extends Component {
                         </div>
                     </button>
                 </div>
+                {/* <AlternativeToggle /> */}
                 <div className={styles.tabPane}>
                     {isPositive ? (
                         <div>

@@ -21,6 +21,10 @@ const IntroHeader = () => (
     </div>
 )
 
+const IntroHeader2 = () => (
+    <div className={styles.introContainer} />
+)
+
 export default class Header extends Component {
     constructor(props) {
         super(props);
@@ -84,7 +88,7 @@ export default class Header extends Component {
                         />
                     </div>
                 </div>
-                <IntroHeader />
+                <IntroHeader2 />
             </div>
         );
     }

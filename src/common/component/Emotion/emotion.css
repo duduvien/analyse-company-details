@@ -25,11 +25,12 @@
     }
 
     .percentage {
-        font-weight: 300;
+        font-weight: 400;
         font-size: 24px;
+        margin-bottom: 0px;
     }
 
     .feeling {
-        font-size: 14px;
+        font-size: 16px;
         text-transform: capitalize;
     }
