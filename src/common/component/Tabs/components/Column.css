@@ -1,12 +1,53 @@
+.typewriter {
+    margin-bottom: 5px;
+}
+
 .typewriter p{
     overflow: hidden; /* Ensures the content is not revealed until the animation */
-    border-right: .15em solid orange; /* The typwriter cursor */
     white-space: nowrap; /* Keeps the content on a single line */
-    animation:
-            typing 4s steps(30, end),
-            blink-caret .75s step-end infinite;
     max-inline-size: max-content;
+    z-index: 115;
+    position: relative;
+    line-height: 20px;
+    font-size: 20px;
+    padding: 20px;
+    color: #ffffff;
+    background: #669933;
 }
+
+.typewriter:nth-of-type(1) p{
+    animation:
+            typing 3s steps(150, end),
+            blink-caret .75s step-end;
+}
+
+.typewriter:nth-of-type(2) p{
+    animation:
+            typing 2s steps(200, end);
+}
+.typewriter:nth-of-type(3) p{
+    animation:
+            typing 1s steps(200, end);
+}
+.typewriter:nth-of-type(4) p{
+    animation:
+            typing 2s steps(100, end);
+}
+.typewriter:nth-of-type(5) p{
+    animation:
+            typing 2s steps(200, end);
+}
+
+.typewriter.floatRight p {
+    padding: 20px;
+    background: #003399;
+}
+
+.floatRight {
+    display: flex;
+    justify-content: flex-end;
+}
+
 
 /* The typing effect */
 @keyframes typing {
@@ -18,4 +59,8 @@
 @keyframes blink-caret {
     from, to { border-color: transparent }
     50% { border-color: orange; }
+}
+
+@keyframes percentage {
+    0% { width: 0 }
 }

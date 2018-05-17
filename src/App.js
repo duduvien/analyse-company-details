@@ -9,6 +9,7 @@ import AngryIcon from './common/component/AngryIcon/AngryIcon';
 import FearIcon from './common/component/FearIcon/FearIcon';
 import SarcasmIcon from './common/component/SarcasmIcon/SarcasmIcon';
 import styles from './App.css';
+import CompanyReview from './pages/CompanyReview/CompanyReview';
 
 class App extends Component {
   render() {
