@@ -1,7 +1,7 @@
 [
   {
-    "Phrases": "Did not provide any training Development",
-    "ProbA": "Ineffective Management and lack of training Development",
+    "Phrases": "Did not provide any training",
+    "ProbA": "Ineffective Management and lack of training",
     "ProbB": "Disregarding Professional Development"
   },
   {
@@ -10,7 +10,7 @@
     "ProbB": "Unstable working process and long working hours"
   },
   {
-    "Phrases": "Communitcation issue with the top level management",
+    "Phrases": "Communication issue with the top level management",
     "ProbA": "Passive-Aggressive Communication between Employee - Management",
     "ProbB": "Disregarding Professional Development"
   },
