@@ -6,7 +6,7 @@ const CommentCol = ({data, floatRight}) => {
     return (
     <div className={`${styles.typewriter} ${floatRight && styles.floatRight}`}>
         <p>
-            {data.value}
+            {data}
         </p>
     </div>
 )};

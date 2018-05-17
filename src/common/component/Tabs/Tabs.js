@@ -9,54 +9,40 @@ const content = [
     {value: "test2", percentage: '30'}
 ];
 
+const KEYS = ['Phrases','ProbA','ProbB'];
+
 class Tabs extends Component {
     constructor() {
         super();
         this.tiveness = ['POSITIVE', 'NEGETIVE'];
-        this.state = { activeTab: 'POSITIVE' }
-        console.log('goodPhases', goodPhases);
-        this.goodContent = [
-            {value: "Good work life balance"},
-            {value: "Growth and flexible working hours"},
-            {value: "Life balance working environment"},
-            {value: "Proper delivery deadlines"},
-            {value: "Good career path or career progression"},
-            {value: "Learn new things to gained to gained more knowledge"},
-            {value: "Unstable working process and long working hours"},
-            {value: "Rewards"},
-        ];
-        this.badContent = [
-            {value: "Having salaries that haven't increased much, but expenses that have"},
-            {value: "Did not provide any training"},
-            {value: "Ineffective Management and lack of training"},
-            {value: "Disregarding Professional Development"},
-            {value: "Heavy Workload"},
-            {value: "Terrible work schedule and culture"},
-            {value: "Unstable working process and long working hours"},
-            {value: "Communitcation issue with the top level management"},
-        ];
+        this.state = { activeTab: 'POSITIVE', objKey: 'Phrases' }
     }
 
     componentDidMount() {
-        this.timer = setInterval(() =>  this.setState(prevState => ({ test: !prevState.test })), 5000);
+        this.timer = setInterval(() =>  this.setState(this.changeDataSet), 5000);
     }
 
     componentWillUnmount() {
         clearInterval(this.timer);
     }
 
+    changeDataSet(prev) {
+        if(this.state.objKey === prev.objKey) {
+           const nextKey = KEYS.indexOf(this.state.objKey ) + 1;
+           return { objKey: KEYS[nextKey >= KEYS.length ? 0 : nextKey] };
+        }
+    }
 
     handleChange(event) {
         event.preventDefault();
-        console.log(event.target.value);
         if(event.target.value !== this.state.activeTab) {
             this.setState({ activeTab: this.tiveness.find((item) => item !== this.state.activeTab)});
         }
     }
 
     render() {
-        const {activeTab} = this.state;
-        const isPositive =  activeTab === 'POSITIVE';
+        const {activeTab, objKey} = this.state;
+        const isPositive = activeTab === 'POSITIVE';
 
         return (
           <div>
@@ -74,26 +60,25 @@ class Tabs extends Component {
               {
                   isPositive ? <div>
                       {
-                          this.goodContent.map((item, index) => {
-                              console.log('item=>', item);
+                          goodPhases.map((item, index) => {
+                              console.log('item=>', item[objKey]);
                               return (
-                                  <Column key={index} data={item}/>
+                                  <Column key={index} data={item[objKey]}/>
                               );
                           })
                       }
                   </div> : <div>
                       {
-                          this.badContent.map((item, index) => {
-                              console.log('item=>', item);
+                          badPhases.map((item, index) => {
+                              console.log('item=>', item[objKey]);
                               return (
-                                  <Column key={index} data={item} floatRight/>
+                                  <Column key={index} data={item[objKey]} floatRight/>
                               );
                           })
                       }
                   </div>
               }
               </div>
-
           </div>
         );
     }
