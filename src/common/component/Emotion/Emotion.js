@@ -35,7 +35,7 @@ const Emotion = ({ emotion }) => (
     <div className={styles.container}>
         {getEmotionIcon(emotion.type)}
         <div className={styles.infoContainer}>
-            <p className={styles.percentage}>{Math.ceil(emotion.percentage)}%</p>
+            <p className={styles.percentage}>{Math.round(emotion.percentage)}%</p>
             <p className={styles.feeling}>Feel {emotion.type}</p>
         </div>
     </div>

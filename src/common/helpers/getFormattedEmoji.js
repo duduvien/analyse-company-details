@@ -22,7 +22,7 @@ const formatAndSortEmotions = (emotions, isGood) => {
         if (isPrioritize && prioritizeEmotions.length < 3) {
             prioritizeEmotions.push(emotion);
         } else {
-            lastEmotions.push(emotion)
+            // lastEmotions.push(emotion)
         }
     });
 
